@@ -1,0 +1,52 @@
+{
+  "prettier.enable": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.config": null,
+  "stylelint.validate": [
+    "css",
+    "sass",
+    "scss",
+    "postcss",
+    "vue"
+  ],
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // I18n
+  "i18n-ally.enabledFrameworks": [
+    "custom",
+    "vue",
+  ],
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.enabledParsers": [
+    "json",
+  ],
+  "i18n-ally.localesPaths": [
+    "src/assets/lang/i18ns"
+  ],
+}

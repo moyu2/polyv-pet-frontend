@@ -1,0 +1,16 @@
+$--theme-configs:(
+  'mobile-follow-button:bg-color': #fae035,
+  'mobile-follow-button:text-color': #1968c3,
+);
+
+.pws-theme-next-polyfill-freshblue {
+  .pws-pc-watch-bg {
+    background-image: url('./imgs/pws-pc-watch-bg.png');
+  }
+
+  // .pws-mobile-follow-button {
+  //   color: map.get($--theme-configs, 'mobile-follow-button:text-color') !important;
+  //   background-color: map.get($--theme-configs, 'mobile-follow-button:bg-color') !important;
+  //   border-color: transparent !important;
+  // }
+}

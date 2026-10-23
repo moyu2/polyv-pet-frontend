@@ -1,0 +1,22 @@
+// 聊天室列表提示样式
+.c-chat-msg-list__tips {
+  margin: 4px 0;
+}
+
+// 聊天室列表加载中样式
+.c-chat-msg-list__loading {
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+  &::after {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    content: '';
+    background-image: url(../imgs/loading.png);
+    background-position: center;
+    background-size: cover;
+    animation: spin 1s ease infinite;
+  }
+}

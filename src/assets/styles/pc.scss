@@ -1,0 +1,23 @@
+@import './pc-response.scss';
+
+.g-pc-main-layout {
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.g-outside {
+  min-width: 100%;
+}
+
+.g-boundary {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 1280px) {
+  .g-boundary {
+    width: 94%;
+  }
+}

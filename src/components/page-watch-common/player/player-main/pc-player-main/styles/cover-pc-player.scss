@@ -1,0 +1,46 @@
+// @file 覆盖 PC 端播放器样式
+
+// 隐藏点播播放器的续播提示
+.pv-start-time {
+  display: none !important;
+}
+
+.c-pc-player-main__container .plv-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+// 隐藏直播播放器的一个小图标
+.plv-icon.plv-icon-volume.plv-cutoff-volume {
+  display: none;
+}
+
+.plv-live-player-password {
+  z-index: 999 !important;
+}
+
+.plv-live-player-container {
+  background-color: transparent !important;
+}
+
+.plv-live-player-media-pre-volume > .plv-icon.plv-icon-volume {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.plv-live-player-media-pause {
+  z-index: 999 !important;
+}
+
+.plv-live-player-cutOff {
+  background-color: #2b3045;
+  @include pc-watch-card-radius-top;
+}
+
+.vcp-player {
+  background-color: transparent !important;
+}
+
+.vcp-player video {
+  background: transparent !important;
+}

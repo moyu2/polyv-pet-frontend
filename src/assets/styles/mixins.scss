@@ -1,0 +1,217 @@
+// 对于 iphone x 系列采用安全距离作为底部 padding
+// $normalBottom, 若非 iphone x 系列,底部距离
+@mixin iphone-x-pb($normalBottom, $isReplace: true) {
+  @if $normalBottom == 0 {
+    $normalBottom: unquote('0px');
+  }
+
+  // 用安全距离替换原底部padding值。若原底部padding值大于底部安全距离，则不会被替换。
+  @if $isReplace {
+    padding-bottom: $normalBottom;
+    .g-page--ios & {
+      @supports (padding-bottom: env(safe-area-inset-bottom)) or (padding-bottom: constant(safe-area-inset-bottom, $normalBottom)) {
+        padding-bottom: unquote('max(constant(safe-area-inset-bottom, #{$normalBottom}), #{$normalBottom})');
+        padding-bottom: unquote('max(env(safe-area-inset-bottom, #{$normalBottom}), #{$normalBottom})');
+      }
+    }
+  } @else {
+    // 安全距离与原底部padding值叠加
+    // ios < 11.2
+    padding-bottom: calc(constant(safe-area-inset-bottom) + #{$normalBottom});
+    // ios >= 11.2
+    padding-bottom: calc(env(safe-area-inset-bottom) + #{$normalBottom});
+    // 兼容不支持calc(env(safe-area-inset-bottom)和calc(constant(safe-area-inset-bottom)这两种写法的浏览器，假设安全距离为0，设置padding-bottom为传出的值
+    @supports not(padding-bottom: calc(env(safe-area-inset-bottom) + #{$normalBottom}) or (padding-bottom: calc(constant(safe-area-inset-bottom, $normalBottom) + #{$normalBottom}))) {
+      padding-bottom: $normalBottom;
+    }
+  }
+}
+
+// 处理绝对定位时的 bottom
+@mixin iphone-x-b($normalBottom, $isReplace: true) {
+  @if $normalBottom == 0 {
+    $normalBottom: unquote('0px');
+  }
+
+  @if $isReplace {
+    bottom: $normalBottom;
+    .g-page--ios & {
+      @supports (bottom: env(safe-area-inset-bottom)) or (bottom: constant(safe-area-inset-bottom, $normalBottom)) {
+        bottom: unquote('max(constant(safe-area-inset-bottom, #{$normalBottom}), #{$normalBottom})');
+        bottom: unquote('max(env(safe-area-inset-bottom, #{$normalBottom}), #{$normalBottom})');
+      }
+    }
+  } @else {
+    // 安全距离与原底部padding值叠加
+    // ios < 11.2
+    bottom: calc(constant(safe-area-inset-bottom) + #{$normalBottom});
+    // ios >= 11.2
+    bottom: calc(env(safe-area-inset-bottom) + #{$normalBottom});
+    // 兼容不支持calc(env(safe-area-inset-bottom)和calc(constant(safe-area-inset-bottom)这两种写法的浏览器，假设安全距离为0，设置bottom为传出的值
+    @supports not(bottom: calc(env(safe-area-inset-bottom) + #{$normalBottom}) or (bottom: calc(constant(safe-area-inset-bottom, $normalBottom) + #{$normalBottom}))) {
+      bottom: $normalBottom;
+    }
+  }
+}
+
+@mixin clear-input-style {
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  &::-webkit-input-placeholder {
+    color: #9E9E9E;
+  }
+  &::placeholder {
+    color: #9E9E9E;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+  }
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+  &[disabled] {
+    opacity: 1;
+  }
+  &[type=button],
+  &[type=submit],
+  &[type=reset] {
+    -webkit-appearance: none;
+    background: #fff;
+  }
+}
+
+@mixin scrollbar($scrollbar-color: null, $borderRadius: 3px, $scrollbar-width: 6px) {
+  &::-webkit-scrollbar {
+    width: 6px;
+    @if ($scrollbar-width) {
+      width: $scrollbar-width;
+    }
+    border-radius: $borderRadius;
+  }
+  &::-webkit-scrollbar-thumb {
+    @if ($scrollbar-color) {
+      background-color: $scrollbar-color;
+    }
+    border-radius: $borderRadius;
+  }
+}
+
+// 隐藏滚动条
+@mixin hidden-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin scroll-style {
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #CFD8DC;
+    border: 2px solid #EDF1F7;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: #EDF1F7;
+  }
+}
+
+// 单行内容超出省略
+@mixin singleline-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行内容超出省略
+@mixin multiline-text($lineCount: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineCount;
+}
+
+// 利用缩放生成0.5px 边框
+// @mixin minor-border($color: #e1e1e1) {
+//   &::after {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     box-sizing: border-box;
+//     display: block;
+//     width: 200%;
+//     height: 200%;
+//     pointer-events: none;
+//     content: '';
+//     border: 1px solid $color;
+//     border-radius: 50%;
+//     transform: scale(0.5);
+//     transform-origin: 0 0;
+//   }
+// }
+
+$others-font: 'Helvetica Neue', helvetica, 'PingFang SC', 'Microsoft YaHei', arial, sans-serif;
+$mobile-font: 'PingFangSC-Regular', 'Roboto', $others-font;
+@mixin mobile-font($type: regular, $font-size: 12px, $font-weight: normal) {
+  @if $type == regular {
+    font: $font-weight $font-size $mobile-font;
+  } @else if $type == medium {
+    font: $font-weight $font-size $mobile-font;
+  } @else if $type == semibold {
+    font: $font-weight $font-size $mobile-font;
+  }
+}
+
+
+// 混入 alibaba 字体
+@mixin alibaba-font($font-size: 12px, $font-weight: normal) {
+  font: $font-weight $font-size ALIBABAFont, $mobile-font;
+}
+
+@mixin pseudo-border-bottom($border-opacity: 0.2) {
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+    content: '';
+    background-color: currentColor;
+    opacity: $border-opacity;
+  }
+}
+
+@mixin pseudo-border-top($border-opacity: 0.2) {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+    content: '';
+    background-color: currentColor;
+    opacity: $border-opacity;
+  }
+}
+
+
+// 强制页面全屏
+@mixin force-page-fullscreen {
+  position: absolute;
+  top: 50%;
+  bottom: 0 !important;
+  left: 50%;
+  width: $--plv-mobile-watch-full-screen-vh;
+  height: $--plv-mobile-watch-full-screen-vw;
+  transform: translate(-50%, -50%) rotate(90deg);
+}

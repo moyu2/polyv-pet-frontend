@@ -1,0 +1,34 @@
+{
+  "name": "sdk-inject-project",
+  "version": "1.0.0",
+  "description": "处理 sdk 注入项目脚本",
+  "main": "src/main.js",
+  "scripts": {
+    "sync-parent-dist": "node ./build/sync",
+    "build-main": "rollup -c --bundleConfigAsCjs",
+    "dev": "rm -rf dist && npm run build-main",
+    "build": "rm -rf dist && npm run build-main && npm run sync-parent-dist",
+    "build:serve": "npm run build && serve dist -p 5500 --cors"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "~3.34.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.23.6",
+    "@babel/preset-env": "~7.23.6",
+    "@polyv/utils": "^3.2.0",
+    "@rollup/plugin-babel": "~6.0.4",
+    "@rollup/plugin-commonjs": "~25.0.7",
+    "@rollup/plugin-node-resolve": "~15.2.3",
+    "@rollup/plugin-terser": "~0.4.4",
+    "cross-env": "~7.0.3",
+    "dotenv": "~16.4.1",
+    "rollup": "~4.24.4",
+    "serve": "~14.2.1"
+  },
+  "engines": {
+    "node": ">= 20.10.0"
+  }
+}

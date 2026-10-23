@@ -1,0 +1,131 @@
+@use 'sass:map';
+@use '~@polyv/vue-components/styles/skin-color.scss' as *;
+@use '~@polyv/vue-components/styles/variables.scss' as *;
+
+@import './function.scss';
+
+$--plv-mobile-watch-full-screen-vw: var(--plv-watch-full-screen-vw) !default;
+$--plv-mobile-watch-full-screen-vh: var(--plv-watch-full-screen-vh) !default;
+
+$--plv-pc-watch-full-screen-vw: var(--plv-watch-full-screen-vw) !default;
+$--plv-pc-watch-full-screen-vh: var(--plv-watch-full-screen-vh) !default;
+
+
+// 封顶层级的 z-index
+$--zIndex-max-top: 99999;
+// 最高层级的 z-index
+$--zIndex-top: 10001;
+// 一般挂件的 z-index
+$--zIndex-pendant: 2002;
+// 弹窗的基础层级
+$--zIndex-dialog-base: 3000;
+
+$pendant-size: 36px !default; // 挂件大小
+
+$--color-white: #FFFFFF !default; // 白色
+$--color-black: #000000 !default; // 黑色
+$--color-primary: #3F76FC !default; // 主题色
+
+// #d6e6ff
+$--color-primary-light-8: get-opacity-color($--color-primary, 8);
+
+// 背景色
+$--bg-color-portrait-popup: #262523 !default; // 竖屏下的弹层背景色
+
+// 字体色
+$--font-color-primary: rgba(#000, 0.8) !default; // 默认字体颜色
+$--font-color-disabled: #9E9E9E !default; // 不可用
+$--font-color-info: #999999 !default; // 信息
+$--font-color-error: #ff5722 !default; // 异常
+
+// 边框色
+$--border-color-primary: #EDEDEF !default; // 常规边框色
+$--border-color-error: #ff5722 !default; // 异常状态边框色
+
+// 阴影
+$--shadow-dialog: 0 0 16px 0 rgba(0, 0, 0, 0.08) !default; // 对话框阴影
+
+// 弹层相关
+$--popper-shadow: 0 4px 20px 0 rgba(51, 58, 71, 0.102) !default; // 弹层阴影
+$--popper-border-radius: 8px !default; // 弹层圆角
+
+// 表单相关样式变量
+$--form-input-height: 44px !default; // 输入框高度
+$--form-input-height-small: 30px !default; // 输入框高度 - small
+
+$--form-input-padding: 0 16px !default; // 输入框内边距
+$--form-input-padding-small: 0 8px !default; // 输入框内边距 - small
+
+$--form-input-font-size: 14px !default; // 输入框字体大小
+$--form-input-font-size-small: 12px !default; // 输入框字体大小 - small
+
+$--form-input-border-radius: 8px !default; // 输入框圆角
+$--form-input-border-color: transparent !default; // 输入框边框颜色
+$--form-input-border-color-error: $--border-color-error !default; // 输入框异常边框色
+
+$--form-input-bg: $--color-white !default; // 输入框背景色
+$--form-input-bg-error: #ffe9e9 !default; // 输入框异常背景色
+
+// 表单相关样式变量(移动端)
+$--mobile-form-input-sizes: (
+  'default': (
+    'height': 48px,
+    'padding': 0 16px,
+    'font-size': 16px,
+    'radius': 24px,
+  ),
+  'medium': (
+    'height': 40px,
+    'padding': 0 16px,
+    'font-size': 14px,
+    'radius': 20px,
+  ),
+  'small': (
+    'height': 36px,
+    'padding': 0 12px,
+    'font-size': 14px,
+    'radius': 18px,
+  ),
+) !default;
+
+$--mobile-form-input-themes: (
+  'default': (
+    'border-color': #f6f6f6,
+    'background': #f6f6f6,
+    'font-color': $--font-color-primary,
+  ),
+  'error': (
+    'border-color': $--border-color-error,
+    'background': #f6f6f6,
+    'font-color': $--font-color-primary,
+  ),
+) !default;
+
+$--form-input-themes: (
+  'gray': (
+    'border-color': #F7F8FA,
+    'background': #F7F8FA,
+  ),
+  'white': (
+    'border-color': #fff,
+    'background': #fff,
+  ),
+) !default;
+
+// 播放器控制栏相关样式变量
+// 播放器面板背景
+$--player-control-panel-bg: rgba(0, 0, 0, 0.65) !default;
+
+$--pc-watch-card-radius: 16px !default;
+
+@mixin pc-watch-card-radius {
+  border-radius: $--pc-watch-card-radius;
+}
+
+@mixin pc-watch-card-radius-top {
+  border-radius: $--pc-watch-card-radius $--pc-watch-card-radius 0 0;
+}
+
+@mixin pc-watch-card-radius-bottom {
+  border-radius: 0 0 $--pc-watch-card-radius $--pc-watch-card-radius;
+}

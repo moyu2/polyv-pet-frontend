@@ -1,0 +1,7 @@
+@use 'sass:math';
+@use 'sass:map';
+
+// 获取颜色在白色叠底下的透明级别颜色
+@function get-opacity-color($color, $level) {
+  @return mix(#FFFFFF, $color, math.percentage(math.div($level, 10)));
+}

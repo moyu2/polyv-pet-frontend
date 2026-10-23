@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "format": "svg",
+  "viewBox": [
+    0,
+    0,
+    512,
+    512
+  ],
+  "background": "transparent",
+  "baseline": 444,
+  "actions": [
+    "idle",
+    "eat",
+    "happy",
+    "hungry"
+  ],
+  "species": {
+    "dog": {
+      "name": "狗狗",
+      "stages": {
+        "puppy": {
+          "name": "幼犬",
+          "backendStage": "egg",
+          "files": {
+            "idle": "dog/puppy/idle.svg",
+            "eat": "dog/puppy/eat.svg",
+            "happy": "dog/puppy/happy.svg",
+            "hungry": "dog/puppy/hungry.svg"
+          }
+        },
+        "juvenile": {
+          "name": "少年犬",
+          "backendStage": "juvenile",
+          "files": {
+            "idle": "dog/juvenile/idle.svg",
+            "eat": "dog/juvenile/eat.svg",
+            "happy": "dog/juvenile/happy.svg",
+            "hungry": "dog/juvenile/hungry.svg"
+          }
+        },
+        "adult": {
+          "name": "成犬",
+          "backendStage": "adult",
+          "files": {
+            "idle": "dog/adult/idle.svg",
+            "eat": "dog/adult/eat.svg",
+            "happy": "dog/adult/happy.svg",
+            "hungry": "dog/adult/hungry.svg"
+          }
+        }
+      }
+    },
+    "chicken": {
+      "name": "小鸡",
+      "stages": {
+        "egg": {
+          "name": "鸡蛋",
+          "backendStage": "egg",
+          "files": {
+            "idle": "chicken/egg/idle.svg",
+            "eat": "chicken/egg/eat.svg",
+            "happy": "chicken/egg/happy.svg",
+            "hungry": "chicken/egg/hungry.svg"
+          }
+        },
+        "chick": {
+          "name": "雏鸡",
+          "backendStage": "juvenile",
+          "files": {
+            "idle": "chicken/chick/idle.svg",
+            "eat": "chicken/chick/eat.svg",
+            "happy": "chicken/chick/happy.svg",
+            "hungry": "chicken/chick/hungry.svg"
+          }
+        },
+        "adult": {
+          "name": "成鸡",
+          "backendStage": "adult",
+          "files": {
+            "idle": "chicken/adult/idle.svg",
+            "eat": "chicken/adult/eat.svg",
+            "happy": "chicken/adult/happy.svg",
+            "hungry": "chicken/adult/hungry.svg"
+          }
+        }
+      }
+    }
+  },
+  "effects": {
+    "evolution": "effects/evolution.svg",
+    "hatching": "effects/hatching.svg",
+    "hearts": "effects/hearts.svg",
+    "sparkles": "effects/sparkles.svg",
+    "dog-food": "effects/dog-food.svg",
+    "chicken-food": "effects/chicken-food.svg"
+  }
+}

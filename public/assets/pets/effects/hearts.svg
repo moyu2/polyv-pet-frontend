@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="effect-hearts-root" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="effect-hearts-title effect-hearts-desc" data-species="" data-stage="" data-action="idle">
+<title id="effect-hearts-title">爱心</title><desc id="effect-hearts-desc">透明背景的独立矢量宠物素材，身体部件保留分组；支持减少动态效果偏好。</desc>
+<defs>
+ <linearGradient id="effect-hearts-coat" x1="0" y1="0" x2=".25" y2="1"><stop stop-color="#ffe1a0"/><stop offset="1" stop-color="#e8ac55"/></linearGradient>
+ <linearGradient id="effect-hearts-ear" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#e6b679"/><stop offset="1" stop-color="#bd7c3f"/></linearGradient>
+ <linearGradient id="effect-hearts-cream" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffcef"/><stop offset="1" stop-color="#ffe8bd"/></linearGradient>
+ <linearGradient id="effect-hearts-yellow" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#ffe98a"/><stop offset="1" stop-color="#f0bd46"/></linearGradient>
+ <linearGradient id="effect-hearts-egg" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#fffdf1"/><stop offset=".6" stop-color="#ffedc8"/><stop offset="1" stop-color="#e9c88c"/></linearGradient>
+ <linearGradient id="effect-hearts-bowl" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d4aa71"/><stop offset="1" stop-color="#ac7647"/></linearGradient>
+ <radialGradient id="effect-hearts-glow"><stop stop-color="#fff9d5" stop-opacity=".95"/><stop offset=".5" stop-color="#ffd86b" stop-opacity=".45"/><stop offset="1" stop-color="#ffd86b" stop-opacity="0"/></radialGradient>
+ </defs><style>
+ #effect-hearts-root .pet{transform-box:fill-box;transform-origin:50% 100%;animation:effect_hearts_breath 3s ease-in-out infinite}
+ #effect-hearts-root .tail{transform-box:fill-box;transform-origin:10% 85%;animation:effect_hearts_wag 1.8s ease-in-out infinite}
+ #effect-hearts-root .heart{transform-box:fill-box;animation:effect_hearts_float 2.2s ease-in-out infinite}
+ #effect-hearts-root .spark{transform-box:fill-box;transform-origin:center;animation:effect_hearts_shine 1.6s ease-in-out infinite}
+ @keyframes effect_hearts_breath{0%,100%{transform:scale(1)}50%{transform:scale(1.012,.989)}}
+ @keyframes effect_hearts_wobble{0%,65%,100%{transform:rotate(0)}73%{transform:rotate(-4deg)}82%{transform:rotate(4deg)}91%{transform:rotate(-2deg)}}
+ @keyframes effect_hearts_nod{0%,100%{transform:rotate(0)}50%{transform:translateY(3px) rotate(-1.4deg)}}
+ @keyframes effect_hearts_hop{0%,80%,100%{transform:translateY(0)}35%{transform:translateY(-12px) rotate(-1deg)}}
+ @keyframes effect_hearts_tired{0%,100%{transform:translateY(0)}50%{transform:translateY(3px) scale(1,.99)}}
+ @keyframes effect_hearts_wag{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(7deg)}}
+ @keyframes effect_hearts_float{0%,100%{transform:translateY(0);opacity:.75}50%{transform:translateY(-9px);opacity:1}}
+ @keyframes effect_hearts_shine{0%,100%{opacity:.4;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+ @media(prefers-reduced-motion:reduce){#effect-hearts-root *{animation:none!important}}
+ </style>
+<g stroke-linecap="round" stroke-linejoin="round"><g id="effect-hearts-heart-0" class="heart"><g transform="translate(158 240) scale(0.9)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g></g><g id="effect-hearts-heart-1" class="heart"><g transform="translate(260 163) scale(1.1)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g></g><g id="effect-hearts-heart-2" class="heart"><g transform="translate(355 242) scale(0.7)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g></g><g id="effect-hearts-heart-3" class="heart"><g transform="translate(222 344) scale(0.6)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g></g><g id="effect-hearts-heart-4" class="heart"><g transform="translate(345 358) scale(0.5)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g></g></g></svg>

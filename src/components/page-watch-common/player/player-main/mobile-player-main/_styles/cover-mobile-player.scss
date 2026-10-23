@@ -1,0 +1,28 @@
+.g-page--fake-mobile-in-pc {
+  .c-mobile-player-main__container .plv-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .plv-live-player-media-pre-volume > .plv-icon.plv-icon-volume {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+.vcp-player {
+  background-color: transparent !important;
+}
+
+.vcp-player video {
+  background: transparent !important;
+}
+
+.c-mobile-player-main__container {
+  .plwrap:not(.plv-live-fullscreen--landscape) {
+    background: none !important;
+  }
+  video {
+    background-color: transparent !important;
+  }
+}

@@ -1,0 +1,76 @@
+// =====================================================
+// Next Theme 核心变量定义
+// =====================================================
+// 这些变量被 config 文件引用，用于生成 CSS 变量
+// =====================================================
+
+// 主题名称
+$--theme-type: 'next';
+
+// 白色（用于一些固定的白色元素）
+$--color-white: #fff;
+
+// 黑色（用于一些固定的白色元素）
+$--color-dark: #000;
+
+// ========== 核心颜色变量 ==========
+// 主题色 - 使用 CSS 变量插值
+$--dynamic-theme-color: #{'rgba(var(--pws-next-theme-rgb), 1)'};
+// 主要色（主题强调色）
+$--dynamic-primary-color: #{'rgba(var(--pws-next-primary-rgb), 1)'};
+// 中性色（根据 dark/light 模式变化）
+$--dynamic-neutral-color: #{'rgba(var(--pws-next-neutral-rgb), 1)'};
+
+// ========== Theme 透明度变体 ==========
+// 透明度从低到高排序
+$--dynamic-theme-light-1: #{'rgba(var(--pws-next-theme-rgb), 0.1)'};
+$--dynamic-theme-light-2: #{'rgba(var(--pws-next-theme-rgb), 0.2)'};
+$--dynamic-theme-light-3: #{'rgba(var(--pws-next-theme-rgb), 0.3)'};
+$--dynamic-theme-light-4: #{'rgba(var(--pws-next-theme-rgb), 0.4)'};
+$--dynamic-theme-light-5: #{'rgba(var(--pws-next-theme-rgb), 0.5)'};
+$--dynamic-theme-light-6: #{'rgba(var(--pws-next-theme-rgb), 0.6)'};
+$--dynamic-theme-light-7: #{'rgba(var(--pws-next-theme-rgb), 0.7)'};
+$--dynamic-theme-light-8: #{'rgba(var(--pws-next-theme-rgb), 0.8)'};
+$--dynamic-theme-light-9: #{'rgba(var(--pws-next-theme-rgb), 0.9)'};
+
+// ========== Primary 透明度变体 ==========
+// 透明度从低到高排序
+$--dynamic-primary-light-1: #{'rgba(var(--pws-next-primary-rgb), 0.1)'};
+$--dynamic-primary-light-2: #{'rgba(var(--pws-next-primary-rgb), 0.2)'};
+$--dynamic-primary-light-3: #{'rgba(var(--pws-next-primary-rgb), 0.3)'};
+$--dynamic-primary-light-4: #{'rgba(var(--pws-next-primary-rgb), 0.4)'};
+$--dynamic-primary-light-5: #{'rgba(var(--pws-next-primary-rgb), 0.5)'};
+$--dynamic-primary-light-6: #{'rgba(var(--pws-next-primary-rgb), 0.6)'};
+$--dynamic-primary-light-7: #{'rgba(var(--pws-next-primary-rgb), 0.7)'};
+$--dynamic-primary-light-8: #{'rgba(var(--pws-next-primary-rgb), 0.8)'};
+$--dynamic-primary-light-9: #{'rgba(var(--pws-next-primary-rgb), 0.9)'};
+$--dynamic-primary-light-15: #{'rgba(var(--pws-next-primary-rgb), 0.15)'};
+$--dynamic-primary-light-85: #{'rgba(var(--pws-next-primary-rgb), 0.85)'};
+
+// ========== Neutral 透明度变体 ==========
+// 透明度从低到高排序
+$--dynamic-neutral-light-05: #{'rgba(var(--pws-next-neutral-rgb), 0.05)'};
+$--dynamic-neutral-light-1: #{'rgba(var(--pws-next-neutral-rgb), 0.1)'};
+$--dynamic-neutral-light-15: #{'rgba(var(--pws-next-neutral-rgb), 0.15)'};
+$--dynamic-neutral-light-2: #{'rgba(var(--pws-next-neutral-rgb), 0.2)'};
+$--dynamic-neutral-light-3: #{'rgba(var(--pws-next-neutral-rgb), 0.3)'};
+$--dynamic-neutral-light-4: #{'rgba(var(--pws-next-neutral-rgb), 0.4)'};
+$--dynamic-neutral-light-5: #{'rgba(var(--pws-next-neutral-rgb), 0.5)'};
+$--dynamic-neutral-light-6: #{'rgba(var(--pws-next-neutral-rgb), 0.6)'};
+$--dynamic-neutral-light-7: #{'rgba(var(--pws-next-neutral-rgb), 0.7)'};
+$--dynamic-neutral-light-8: #{'rgba(var(--pws-next-neutral-rgb), 0.8)'};
+$--dynamic-neutral-light-85: #{'rgba(var(--pws-next-neutral-rgb), 0.85)'};
+$--dynamic-neutral-light-9: #{'rgba(var(--pws-next-neutral-rgb), 0.9)'};
+
+$--dynamic-reverse-neutral-light-05: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.05)'};
+$--dynamic-reverse-neutral-light-1: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.1)'};
+$--dynamic-reverse-neutral-light-15: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.15)'};
+$--dynamic-reverse-neutral-light-2: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.2)'};
+$--dynamic-reverse-neutral-light-3: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.3)'};
+$--dynamic-reverse-neutral-light-4: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.4)'};
+$--dynamic-reverse-neutral-light-5: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.5)'};
+$--dynamic-reverse-neutral-light-6: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.6)'};
+$--dynamic-reverse-neutral-light-7: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.7)'};
+$--dynamic-reverse-neutral-light-8: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.8)'};
+$--dynamic-reverse-neutral-light-85: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.85)'};
+$--dynamic-reverse-neutral-light-9: #{'rgba(var(--pws-next-reverse-neutral-rgb), 0.9)'};

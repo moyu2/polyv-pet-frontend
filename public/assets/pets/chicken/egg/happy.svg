@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="chicken-egg-happy-root" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="chicken-egg-happy-title chicken-egg-happy-desc" data-species="chicken" data-stage="egg" data-action="happy">
+<title id="chicken-egg-happy-title">鸡蛋 · 开心</title><desc id="chicken-egg-happy-desc">透明背景的独立矢量宠物素材，身体部件保留分组；支持减少动态效果偏好。</desc>
+<defs>
+ <linearGradient id="chicken-egg-happy-coat" x1="0" y1="0" x2=".25" y2="1"><stop stop-color="#ffe1a0"/><stop offset="1" stop-color="#e8ac55"/></linearGradient>
+ <linearGradient id="chicken-egg-happy-ear" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#e6b679"/><stop offset="1" stop-color="#bd7c3f"/></linearGradient>
+ <linearGradient id="chicken-egg-happy-cream" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffcef"/><stop offset="1" stop-color="#ffe8bd"/></linearGradient>
+ <linearGradient id="chicken-egg-happy-yellow" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#ffe98a"/><stop offset="1" stop-color="#f0bd46"/></linearGradient>
+ <linearGradient id="chicken-egg-happy-egg" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#fffdf1"/><stop offset=".6" stop-color="#ffedc8"/><stop offset="1" stop-color="#e9c88c"/></linearGradient>
+ <linearGradient id="chicken-egg-happy-bowl" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d4aa71"/><stop offset="1" stop-color="#ac7647"/></linearGradient>
+ <radialGradient id="chicken-egg-happy-glow"><stop stop-color="#fff9d5" stop-opacity=".95"/><stop offset=".5" stop-color="#ffd86b" stop-opacity=".45"/><stop offset="1" stop-color="#ffd86b" stop-opacity="0"/></radialGradient>
+ </defs><style>
+ #chicken-egg-happy-root .pet{transform-box:fill-box;transform-origin:50% 100%;animation:chicken_egg_happy_hop .9s ease-in-out infinite}
+ #chicken-egg-happy-root .tail{transform-box:fill-box;transform-origin:10% 85%;animation:chicken_egg_happy_wag  .45s ease-in-out infinite}
+ #chicken-egg-happy-root .heart{transform-box:fill-box;animation:chicken_egg_happy_float 2.2s ease-in-out infinite}
+ #chicken-egg-happy-root .spark{transform-box:fill-box;transform-origin:center;animation:chicken_egg_happy_shine 1.6s ease-in-out infinite}
+ @keyframes chicken_egg_happy_breath{0%,100%{transform:scale(1)}50%{transform:scale(1.012,.989)}}
+ @keyframes chicken_egg_happy_wobble{0%,65%,100%{transform:rotate(0)}73%{transform:rotate(-4deg)}82%{transform:rotate(4deg)}91%{transform:rotate(-2deg)}}
+ @keyframes chicken_egg_happy_nod{0%,100%{transform:rotate(0)}50%{transform:translateY(3px) rotate(-1.4deg)}}
+ @keyframes chicken_egg_happy_hop{0%,80%,100%{transform:translateY(0)}35%{transform:translateY(-12px) rotate(-1deg)}}
+ @keyframes chicken_egg_happy_tired{0%,100%{transform:translateY(0)}50%{transform:translateY(3px) scale(1,.99)}}
+ @keyframes chicken_egg_happy_wag{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(7deg)}}
+ @keyframes chicken_egg_happy_float{0%,100%{transform:translateY(0);opacity:.75}50%{transform:translateY(-9px);opacity:1}}
+ @keyframes chicken_egg_happy_shine{0%,100%{opacity:.4;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+ @media(prefers-reduced-motion:reduce){#chicken-egg-happy-root *{animation:none!important}}
+ </style>
+<g stroke-linecap="round" stroke-linejoin="round"><g id="chicken-egg-happy-pet" class="pet"><g id="chicken-egg-happy-shell" ><path d="M 257 147 C 196 147 145 257 145 333 C 145 403 190 444 257 444 C 325 444 370 403 370 333 C 370 257 319 147 257 147 Z" fill="url(#chicken-egg-happy-egg)" stroke="#754a32" stroke-width="5"/><ellipse cx="188" cy="289" rx="5" ry="8" fill="#edbc7e" opacity=".63"/><ellipse cx="204" cy="351" rx="6" ry="4" fill="#edbc7e" opacity=".63"/><ellipse cx="313" cy="274" rx="4" ry="7" fill="#edbc7e" opacity=".63"/><ellipse cx="330" cy="336" rx="5" ry="7" fill="#edbc7e" opacity=".63"/><ellipse cx="290" cy="401" rx="5" ry="4" fill="#edbc7e" opacity=".63"/><ellipse cx="221" cy="220" rx="4" ry="6" fill="#edbc7e" opacity=".63"/><ellipse cx="179" cy="369" rx="4" ry="6" fill="#edbc7e" opacity=".63"/><ellipse cx="218" cy="205" rx="13" ry="27" fill="#fffefa" opacity=".87" transform="rotate(31 218 205)"/><polygon points="253.00,282.00 259.22,296.44 274.87,297.89 263.06,308.27 266.52,323.61 253.00,315.58 239.48,323.61 242.94,308.27 231.13,297.89 246.78,296.44" fill="#f0bb50" stroke="#754a32" stroke-width="2.5" stroke-linejoin="round"/><path d="M 278 167 L 269 203 L 289 218 L 276 248 L 303 267" fill="none" stroke="#93643b" stroke-width="3.5"/></g></g><g id="chicken-egg-happy-hearts" class="heart"><g transform="translate(365 168) scale(0.75)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g><g transform="translate(136 244) scale(0.5)"><path d="M 0 7 C -26 -12 -19 -30 -6 -26 C -2 -25 0 -22 0 -20 C 4 -32 23 -30 24 -16 C 25 -6 11 3 0 13 Z" fill="#f39aa0" stroke="#754a32" stroke-width="2.7"/></g></g></g></svg>

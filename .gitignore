@@ -1,0 +1,73 @@
+# 本机依赖和工具缓存，可通过 package.json 与 package-lock.json 重新安装
+node_modules/
+jspm_packages/
+.npm/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+
+# 本地环境和私密配置；保留可共享的配置示例
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# 构建和发布产物；build/ 是 Webpack 构建源码，必须保留
+dist/
+dist-static/
+dist-sdk-inject/
+inject-assets.js
+*.tgz
+*.tar
+*.tar.gz
+
+# 日志、浏览器快照、截图与临时发布工作目录，仅保留在本地
+logs/
+*.log*
+*.pid
+work/
+output/
+.playwright-cli/
+
+# 一次性验收结果和完整请求记录；保留测试脚本及实现文档
+/docs/evidence/
+/docs/*测试报告.*
+/docs/*验收记录.*
+
+# 编辑器个人配置；现有三份共享设置供团队开发使用，继续上传
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/i18n-ally-custom-framework.yml
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+*~
+
+# 本地调试辅助文件
+false
+polyv-check.js
+
+# 服务器专用发布资料仅在内部工作目录保留，不进入公开仓库
+/deploy/
+/deploy.ps1
+/deploy.cmd
+/compose.yml
+/docs/*部署说明.*
+/scripts/generate_integration_report.py

@@ -1,0 +1,64 @@
+<!-- @file 移动端横屏-聊天区域异常提示组件 -->
+<template>
+  <div
+    v-if="showTips"
+    class="c-mobile-chat-error-tips"
+  >
+    <mobile-icon-warning-round-fill class="c-mobile-chat-error-tips__icon" />
+
+    <div class="c-mobile-chat-error-tips__content">
+      <span>{{ content }}</span>
+    </div>
+
+    <mobile-icon-close
+      v-if="closable"
+      class="c-mobile-chat-error-tips__close"
+      @click="onClickClose"
+    />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useProps } from '@polyv/vue-components';
+import {
+  MobileIconClose,
+  MobileIconWarningRoundFill,
+} from '@/components/component-icons/mobile/map';
+import { chatErrorTipsProps, useChatErrorTips } from './use-chat-error-tips';
+
+const props = defineProps(chatErrorTipsProps());
+
+const { content, closable } = useProps(props);
+
+const { showTips, onClickClose } = useChatErrorTips();
+</script>
+
+<style lang="scss">
+.c-mobile-chat-error-tips {
+  box-sizing: border-box;
+  display: flex;
+  padding: 12px;
+  color: #ffffff;
+  background: #ff6767;
+  border-radius: 4px;
+}
+
+.c-mobile-chat-error-tips__icon {
+  display: flex;
+  margin-right: 8px;
+  font-size: 16px !important;
+}
+
+.c-mobile-chat-error-tips__content {
+  flex: 1;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.c-mobile-chat-error-tips__close {
+  display: flex;
+  margin-left: 8px;
+  font-size: 16px !important;
+  cursor: pointer;
+}
+</style>

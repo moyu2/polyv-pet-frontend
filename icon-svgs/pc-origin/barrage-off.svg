@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <title>弹幕-关</title>
+	<g style="mix-blend-mode:passthrough">
+		<g style="mix-blend-mode:passthrough">
+			<rect x="0" y="0" width="24" height="24" rx="0" fill="#000000" fill-opacity="0" />
+			<g style="mix-blend-mode:passthrough">
+				<g style="mix-blend-mode:passthrough">
+				</g>
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="9" y="3" width="13" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="2" y="8" width="13" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="9" y="18" width="3" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="2" y="18" width="5" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="2" y="3" width="5" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="17" y="8" width="5" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<rect x="2" y="13" width="9" height="2" rx="1" fill="#FFFFFF" fill-opacity="1" />
+			</g>
+			<g style="mix-blend-mode:passthrough">
+				<g style="mix-blend-mode:passthrough">
+					<path d="" fill="#FFFFFF" fill-opacity="1" />
+				</g>
+			</g>
+		</g>
+		<g style="mix-blend-mode:passthrough">
+			<path d="M18.5,21C20.98528,21,23,18.98528,23,16.5C23,14.01472,20.98528,12,18.5,12C16.01472,12,14,14.01472,14,16.5C14,18.98528,16.01472,21,18.5,21ZM21.25,16.5C21.25,16.08579,20.91421,15.75,20.5,15.75L16.5,15.75C16.08579,15.75,15.75,16.08579,15.75,16.5C15.75,16.91421,16.08579,17.25,16.5,17.25L20.5,17.25C20.91421,17.25,21.25,16.91421,21.25,16.5Z" fill-rule="evenodd" fill="#FF5B5B" fill-opacity="1" />
+		</g>
+	</g>
+</svg>

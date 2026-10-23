@@ -1,0 +1,179 @@
+// @file 竖屏端的互动功能接收端样式覆盖
+
+// ============  全局 ============ //
+
+.plv-iar-pendant {
+  width: 36px;
+  min-width: 36px;
+  padding-top: 36px;
+}
+.plv-iar-pendant__icon {
+  width: 36px;
+  height: 36px;
+}
+
+
+// 按钮
+.plv-iar-default-btn {
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+// ============  卡片推送 ============ //
+
+// 卡片推送
+.plv-iar-push-card,
+.plv-iar-push-card__modal {
+  z-index: 400;
+}
+.plv-iar-default-push-card--fullscreen {
+  z-index: 2002;
+}
+
+// ============  话题 pk ============ //
+
+// 话题 pk
+.plv-iar-modal--topic {
+  z-index: $--zIndex-pendant;
+}
+
+
+// ============  抽奖 ============ //
+
+// 条件抽奖
+.plv-iar-welfare-lottery__modal--normal,
+.plv-iar-welfare-lottery__modal--gift-box,
+.plv-iar-welfare-lottery__on-lottery-modal {
+  z-index: $--zIndex-top;
+}
+
+
+// ============  商品库 ============ //
+
+.c-portrait-product-list__wrap {
+  .pws-iar-input {
+    background-color: #F0F0F0 !important;
+  }
+  .pws-iar-input-native {
+    color: rgba(#000, 0.8) !important;
+
+    &::placeholder {
+      color: rgba(#000, 0.8) !important;
+    }
+  }
+  .plv-iar-product__top__search__icon {
+    color: rgba(#000, 0.4) !important;
+  }
+  .plv-iar-input__clear {
+    background: rgba(#000, 0.1) !important;
+  }
+  .plv-iar-input__clear__icon {
+    color: rgba(#000, 0.4) !important;
+  }
+  // 商品库
+  .pws-iar-product-list-wrap {
+    padding: 0;
+  }
+  .pws-iar-product-list-wrap {
+    background: none;
+  }
+  .plv-iar-product__content {
+    // background-color: initial;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+  }
+  .plv-iar-product-label-list {
+    background: #fff !important;
+  }
+  .plv-iar-product-label-list__arrow__icon {
+    color: #333A47 !important;
+  }
+  .plv-iar-product-label-list__shadow--left {
+    background: linear-gradient(90deg, #262523 0, rgba(#262523, 0) 100%) !important;
+  }
+  .plv-iar-product-label-list__shadow--right {
+    background: linear-gradient(90deg, rgba(#262523, 0) 0, #262523 100%) !important;
+  }
+  .plv-iar-product-label-list__item {
+    color: #333 !important;
+    background-color: #f5f5f5 !important;
+
+    &.plv-iar-product-label-list__item--active {
+      color: #f15d5d !important;
+      background-color: rgba(#f15d5d, 0.1) !important;
+      border-color: #f15d5d !important;
+    }
+  }
+  .plv-iar-product__item__name {
+    margin-bottom: 7px;
+  }
+  .plv-iar-product__item__labels {
+    margin-bottom: 7px;
+  }
+  .plv-iar-product__item__desc {
+    margin-bottom: 7px;
+  }
+  .plv-iar-product-label-list__popper {
+    border-radius: 8px;
+    box-shadow: 0 6px 30px -5px rgba(51, 58, 71, 0.2);
+  }
+  .plv-iar-product-label-list__popper__item--active {
+    .plv-iar-product-label-list__popper__item__btn {
+      background-color: rgba(#f15d5d, 0.1) !important;
+    }
+  }
+  .pws-iar-product-list-number {
+    min-width: unset;
+    line-height: 16px;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 2px;
+  }
+  .pws-iar-product-list-cover {
+    // border-radius: 10px;
+  }
+  .pws-iar-product-list-cover-number {
+    // background-color: #f15d5d !important;
+    // border-radius: 0 0 6px 0;
+  }
+  .pws-iar-product-list-button {
+    min-width: 72px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .plv-iar-product__buy-button.plv-iar-product__buy-button--disabled {
+    .pws-iar-product-list-button {
+      // background: #CDCDCD;
+      opacity: 0.5;
+    }
+  }
+  .pws-iar-product-list-empty-icon,
+  .pws-iar-product-list-empty-text,
+  .plv-iar-product__list-loading {
+    color: #999999 !important;
+  }
+  .pws-iar-product-list-empty-icon,
+  .plv-iar-product__list-loading__icon {
+    opacity: 0.4 !important;
+  }
+  .pws-iar-product-list-not-explained {
+    color: rgba(0, 0, 0, 0.6) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+.plv-iar-product__popup-link .plv-iar-modal {
+  z-index: $--zIndex-top;
+}
+
+// ============  问答 ============ //
+
+// 问答
+.plv-ia-qa-ask-emotion {
+  margin-bottom: 0 !important;
+}

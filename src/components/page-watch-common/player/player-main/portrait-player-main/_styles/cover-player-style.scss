@@ -1,0 +1,69 @@
+// @file 覆盖播放器的样式
+.c-portrait-player-main__container {
+  // ------ CDN ------ //
+  // 覆盖背景图
+  .plwrap:not(.plv-live-fullscreen--landscape) {
+    background: none !important;
+
+    video {
+      background-color: transparent !important;
+    }
+  }
+
+  // 隐藏自带的播放按钮
+  .plv-live-big-play-btn,
+  .plv-live-cover__btn-new,
+  .plv-live-cover__btn {
+    display: none !important;
+  }
+
+  // 隐藏控制栏的渐变背景
+  .plv-player-skin {
+    display: none;
+  }
+
+  .plv-live-panel {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  // 隐藏暖场图
+  .plv-live-warmUp {
+    display: none;
+  }
+  // 隐藏封面图
+  .plv-cover-box {
+    display: none;
+  }
+  // 隐藏禁播图
+  .plv-live-pause {
+    display: none;
+  }
+  .plv-live-cutOff {
+    z-index: initial;
+  }
+
+  // 隐藏播放缓冲切换提示
+  .plv-live-detection {
+    display: none !important;
+  }
+
+
+  // ------ 点播 ------ //
+  .plv-player-big-play-btn {
+    display: none !important;
+  }
+}
+
+.g-page--fake-mobile-in-pc {
+  .plv-live-player-cutOff {
+    z-index: initial;
+  }
+}
+
+.vcp-player {
+  background-color: transparent !important;
+}
+
+.vcp-player video {
+  background: transparent !important;
+}

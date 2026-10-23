@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40">
+  <defs>
+    <linearGradient id="ceramic" x1="0" y1="0" x2="0.25" y2="1">
+      <stop stop-color="#f0d7bb"/>
+      <stop offset="0.5" stop-color="#d7b28e"/>
+      <stop offset="1" stop-color="#b98b69"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff2de"/>
+      <stop offset="1" stop-color="#e3c6a4"/>
+    </linearGradient>
+    <radialGradient id="inside">
+      <stop stop-color="#b28d64"/>
+      <stop offset="1" stop-color="#8c6747"/>
+    </radialGradient>
+    <radialGradient id="shadow">
+      <stop stop-color="#73513a" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#73513a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="40" cy="36" rx="39" ry="4" fill="url(#shadow)"/>
+  <path d="M5 13c2 13 8 22 35 22s33-9 35-22Z" fill="url(#ceramic)"/>
+  <ellipse cx="40" cy="13" rx="35" ry="11" fill="url(#rim)"/>
+  <ellipse cx="40" cy="13" rx="29" ry="7.5" fill="url(#inside)"/>
+  <g fill="#c49a64">
+    <ellipse cx="24" cy="12" rx="4" ry="2.8"/>
+    <ellipse cx="35" cy="9" rx="4.5" ry="2.7"/>
+    <ellipse cx="46" cy="11" rx="4" ry="3"/>
+    <ellipse cx="57" cy="12" rx="4.5" ry="2.6"/>
+  </g>
+  <g fill="#dfb77d">
+    <ellipse cx="29" cy="16" rx="4.5" ry="2.6"/>
+    <ellipse cx="41" cy="15" rx="4.3" ry="2.7"/>
+    <ellipse cx="52" cy="16" rx="4" ry="2.5"/>
+  </g>
+  <path d="M10 18c8 7 52 7 60 0" fill="none" stroke="#f5e0c5" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 24c3 5 9 7 15 7" fill="none" stroke="#fff2dc" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round"/>
+</svg>

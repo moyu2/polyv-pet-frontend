@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 36 36">
+	<g>
+		<g style="opacity:0.5;">
+			<rect x="10" y="10" width="7" height="7" rx="2" fill="#333" fill-opacity="1" />
+		</g>
+		<g style="opacity:0.699999988079071;">
+			<rect x="19" y="10" width="7" height="7" rx="2" fill="#333" fill-opacity="1" />
+		</g>
+		<g style="opacity:0.699999988079071;">
+			<rect x="10" y="19" width="7" height="7" rx="2" fill="#333" fill-opacity="1" />
+		</g>
+		<g style="opacity:0.699999988079071;">
+			<rect x="19" y="19" width="7" height="7" rx="2" fill="#333" fill-opacity="1" />
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,302 @@
+@mixin generate-theme-basic-iar-common-style($--theme-configs) {
+  // -------- 互动功能 -------- //
+  .pws-interactive-entrance-button {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-neutral-light-1 !important;
+    &:hover {
+      background-color: $--dynamic-neutral-light-2 !important;
+    }
+  }
+  .pws-interactive-entrance-arrow {
+    color: $--dynamic-neutral-light-8 !important;
+  }
+
+  // --------- 输入框 --------- //
+  .pws-iar-input {
+    background-color: $--dynamic-neutral-light-1 !important;
+  }
+  .pws-iar-input-native {
+    color: $--dynamic-neutral-color !important;
+    &::placeholder {
+      color: $--dynamic-neutral-color !important;
+      opacity: 0.3;
+    }
+  }
+  .plv-iar-input__clear {
+    background: $--dynamic-neutral-light-1 !important;
+  }
+  .plv-iar-input__clear__icon {
+    color: $--dynamic-neutral-light-3 !important;
+  }
+
+  // --------- 按钮 --------- //
+  .pws-iar-primary-button {
+    color: map.get($--theme-configs, 'primary-button:text-color') !important;
+    background-color: $--dynamic-primary-color !important;
+    border: none !important;
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  // --------- 挂件 --------- //
+  .pws-iar-pendant-text {
+    color: $--dynamic-neutral-color !important;
+  }
+
+
+  // --------- 问答 --------- //
+  .pws-next-iar-qa-answer-config {
+    .pws-iar-qa-filter {
+      background: none !important;
+      // background-color: $--dynamic-theme-light-1 !important;
+      border-bottom-color: $--dynamic-theme-color !important;
+    }
+    .pws-iar-qa-filter-desc {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+    .pws-iar-qa-new-msg-button {
+      color: $--dynamic-theme-color !important;
+      background-color: $--dynamic-neutral-light-7 !important;
+    }
+    .pws-iar-qa-select {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-iar-qa-select-arrow {
+      border-color: $--dynamic-neutral-light-8 !important;
+    }
+    .pws-iar-icon-qa-ask-emotion-icon {
+      path {
+        fill: $--dynamic-neutral-color;
+      }
+    }
+    .pws-iar-pc-qa-ask-emotion-popper {
+      background-color: $--dynamic-theme-color !important;
+    }
+  }
+
+  // --------- 投票 --------- //
+  .pws-iar-vote {
+    .plv-iar-vote__no-data {
+      color: $--dynamic-neutral-color !important;
+    }
+  }
+}
+
+// 生成皮肤的互动功能样式（PC 端）(next 专用)
+@mixin generate-theme-basic-iar-pc-style($--theme-configs) {
+  @include generate-theme-basic-iar-common-style($--theme-configs);
+
+
+  .c-pc-tuwen-live__menu {
+    padding: 4px;
+    background-color: $--dynamic-neutral-light-05 !important;
+
+    border-radius: 4px;
+    @if ($--theme-type == 'next-dark') {
+      background-color: $--dynamic-reverse-neutral-light-4 !important;
+    }
+  }
+
+  // --------- 图文直播 ---------- //
+  .pws-pc-tuwen-live-menu-item {
+    color: $--dynamic-neutral-light-4 !important;
+    border: none;
+    border-radius: 4px;
+  }
+  .pws-pc-tuwen-live-menu-item:hover {
+    color: $--dynamic-primary-color !important;
+  }
+
+  .pws-pc-tuwen-live-menu-item.is-active {
+    color: $--dynamic-neutral-light-8 !important;
+    background-color: $--dynamic-reverse-neutral-light-8 !important;
+
+    @if ($--theme-type == 'next-dark') {
+      background-color: $--dynamic-neutral-light-1 !important;
+    }
+  }
+  .pws-iar-pc-tuwen-live-content-name {
+    color: $--dynamic-primary-color !important;
+  }
+
+  // ---------- 问答 ---------- //
+  .pws-iar-pc-qa-body {
+    // background-color: $--dynamic-theme-light-1 !important;
+    background: none !important;
+  }
+  .pws-iar-pc-qa-body-scroll {
+    &::-webkit-scrollbar-thumb {
+      background-color: $--dynamic-primary-color !important;
+    }
+  }
+  .pws-iar-pc-qa-empty-text {
+    color: $--dynamic-neutral-light-6 !important;
+  }
+  .pws-iar-pc-qa-select-option-popper {
+    background-color: $--dynamic-theme-color !important;
+  }
+  .pws-iar-pc-qa-select-option {
+    color: $--dynamic-neutral-light-5 !important;
+    background-color: $--dynamic-theme-color !important;
+    border-color: $--dynamic-neutral-light-1 !important;
+    &:hover {
+      background-color: $--dynamic-neutral-light-1 !important;
+    }
+    &.is-active {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+  }
+  .pws-iar-pc-qa-ask {
+    background-color: $--dynamic-theme-light-5 !important;
+  }
+  .pws-iar-pc-qa-ask-input {
+    background-color: $--dynamic-reverse-neutral-light-2 !important;
+  }
+  .pws-iar-pc-qa-ask-input-textarea {
+    color: $--dynamic-neutral-color !important;
+    &::placeholder {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $--dynamic-primary-color !important;
+    }
+  }
+  .pws-iar-pc-qa-ask-emotion-icon {
+    color: $--dynamic-neutral-color !important;
+  }
+  .pws-iar-pc-qa-ask-emotion-popper {
+    background-color: map.get($--theme-configs, 'pc-emotion-panel:bg-color') !important;
+    box-shadow: none !important;
+    &::-webkit-scrollbar-thumb {
+      background-color: $--dynamic-neutral-light-1 !important;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: none;
+    }
+  }
+  .pws-iar-pc-qa-ask-send-button {
+    color: map.get($--theme-configs, 'primary-button:text-color') !important;
+    background-color: $--dynamic-primary-color !important;
+    &.is-disabled {
+      opacity: 0.6;
+    }
+  }
+  .pws-iar-pc-qa-item {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-neutral-light-1 !important;
+  }
+  .pws-iar-pc-qa-item-more {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-theme-light-8 !important;
+    .pws-iar-multiline-btn-shadow {
+      background: linear-gradient(270deg, $--dynamic-theme-light-8 0%, rgba(225, 238, 252, 0) 100%) !important;
+    }
+    .pws-iar-multiline-btn-text {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-iar-multiline-btn-arrow {
+      border-color: $--dynamic-neutral-color !important;
+    }
+  }
+  .pws-iar-pc-qa-item-data {
+    color: $--dynamic-neutral-light-6 !important;
+  }
+  .pws-iar-pc-qa-item-answer {
+    border-color: $--dynamic-theme-color !important;
+  }
+
+  .pws-plv-ia-tuwen-message-item-content-text {
+    color: $--dynamic-neutral-color !important;
+  }
+}
+
+// 生成皮肤的互动功能样式（Mobile 端）(next 专用)
+@mixin generate-theme-basic-iar-mobile-style($--theme-configs) {
+  @include generate-theme-basic-iar-common-style($--theme-configs);
+
+  // --------- 问答 --------- //
+  .pws-next-iar-qa-answer-config {
+    .pws-iar-mobile-qa-body {
+      // background-color: $--dynamic-theme-color !important;
+      background: none !important;
+    }
+    .pws-iar-mobile-qa-no-data {
+      color: $--dynamic-neutral-light-6 !important;
+      // background-color: $--dynamic-theme-color !important;
+      background: none !important;
+      &::before {
+        background-image: url(map.get($--theme-configs, 'iar-mobile-qa-no-data:icon-image')) !important;
+      }
+    }
+    .pws-iar-mobile-qa-item {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-neutral-light-1 !important;
+    }
+    .pws-iar-mobile-qa-item-question,
+    .pws-iar-mobile-qa-item-answer {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-neutral-light-1 !important;
+    }
+    .pws-iar-mobile-qa-item-more {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-theme-light-8 !important;
+      .pws-iar-multiline-btn-shadow {
+        background: linear-gradient(270deg, $--dynamic-theme-light-8 0%, rgba(225, 238, 252, 0) 100%) !important;
+      }
+      .pws-iar-multiline-btn-text {
+        color: $--dynamic-neutral-color !important;
+      }
+      .pws-iar-multiline-btn-arrow {
+        border-color: $--dynamic-neutral-color !important;
+      }
+    }
+    .pws-iar-mobile-qa-item-data {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+    .pws-iar-mobile-qa-item-answer-border {
+      border-color: $--dynamic-theme-color !important;
+    }
+    .pws-iar-mobile-no-more {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+    .pws-iar-mobile-qa-ask {
+      background-color: $--dynamic-theme-color !important;
+    }
+    .pws-iar-mobile-qa-ask-input-textarea {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-neutral-light-05 !important;
+      &::placeholder {
+        color: inherit !important;
+        opacity: 0.5;
+      }
+    }
+    .pws-iar-mobile-qa-ask-emotion-icon {
+      color: $--dynamic-neutral-color !important;
+      filter: grayscale(100%) brightness(200%);
+    }
+    .pws-iar-mobile-qa-ask-send-button {
+      color: $--dynamic-neutral-color !important;
+    }
+  }
+
+  // ---------- 图文直播 --------- //
+  .pws-iar-mobile-tuwen-live-header {
+    color: $--dynamic-neutral-light-8 !important;
+  }
+  .pws-iar-mobile-tuwen-live-content-name {
+    color: $--dynamic-neutral-color !important;
+  }
+  .pws-iar-mobile-tuwen-live-content-time {
+    color: $--dynamic-neutral-light-6 !important;
+  }
+  .pws-iar-mobile-tuwen-live-content-text {
+    color: $--dynamic-neutral-color !important;
+  }
+  .pws-iar-mobile-tuwen-live-no-more {
+    color: $--dynamic-neutral-light-6 !important;
+  }
+}

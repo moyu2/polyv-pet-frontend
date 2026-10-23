@@ -1,0 +1,14 @@
+// =====================================================
+// Next Theme Dark PC 端入口文件
+// 精简版：只导入 Dark 模式配置
+// =====================================================
+
+// 加载配置（Dark 模式）- 合并后的完整配置
+@import '../../config/dark-config.scss';
+
+// 加载 next 专用样式文件
+@import '../../style/next-basic-pc-style.scss';
+@import './style.scss';
+
+// 生成样式
+@include generate-theme-basic-pc-style($--theme-configs);

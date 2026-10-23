@@ -1,0 +1,155 @@
+$--skin-iar-mobile-seat-user-card-content--bg1: linear-gradient(113deg, rgba(230, 230, 230, 0.7) 7%, rgba(0, 0, 0, 0.5) 100%);
+$--skin-iar-mobile-seat-user-card-content--bg2: linear-gradient(180deg, #FFBB55 4%, #FFB13A 97%);
+
+// 主题色
+$--skin-primary-color: #d31a34;
+// 次要主题色
+$--skin-sub-primary-color: #ffd595;
+
+$--theme-configs:(
+  // 云席-嘉宾证
+  'mobile-seat-table-guest-card-main:bg-image': './imgs/pws-guest-card-bg.png',
+
+  // 关注按钮背景色
+  'mobile-follow-button:bg-color': $--skin-sub-primary-color,
+  // 关注按钮字体颜色
+  'mobile-follow-button:text-color': #830b0b,
+
+  // 云席
+  'iar-mobile-seat-table-light': './imgs/pws-seat-table-light.png',
+  'iar-mobile-seat-table-guest:bg': './imgs/pws-seat-table-guest-bg.png',
+  'iar-mobile-seat-table-guest-like': './imgs/pws-seat-table-guest-like.png',
+  'iar-mobile-seat-table-sofa-normal': './imgs/pws-seat-table-sofa-normal.png',
+  'iar-mobile-seat-table-sofa-vip': './imgs/pws-seat-table-sofa-vip.png',
+  'iar-mobile-seat-name-text:text-color': $--skin-sub-primary-color,
+  'iar-mobile-seat-name-bLine:bg-color': rgba($--skin-sub-primary-color, .3),
+  'iar-mobile-seat-table-current-seat:border-color': $--skin-sub-primary-color,
+
+  'iar-mobile-seat-user-card-top:bg': './imgs/pws-mobile-seat-table-user-card-top-bg.png',
+
+  'iar-mobile-seat-user-card-content--corner:bg': $--skin-iar-mobile-seat-user-card-content--bg1 + ',' + $--skin-iar-mobile-seat-user-card-content--bg2,
+
+  'iar-mobile-seat-user-card-qrcode-title:bg': linear-gradient(270deg, $--skin-primary-color 0%, $--skin-primary-color 100%),
+  'iar-mobile-seat-user-card-qrcode-wrap:bg': './imgs/pws-mobile-seat-table-user-card-qrcode-bg.png',
+
+  'iar-mobile-seat-user-card-collect-btn:bg': linear-gradient(270deg, $--skin-primary-color 0%, $--skin-primary-color 100%),
+  'iar-mobile-seat-user-card-collect-btn__cancel:bg': #fff,
+  'iar-mobile-seat-user-card-collect-btn__cancel:text-bg':  linear-gradient(270deg, $--skin-primary-color 0%, $--skin-primary-color 100%),
+
+  'iar-mobile-seat-tips-ico:bg': './imgs/pws-icon-has-seat.png',
+  'iar-mobile-seat-tips-seat-count:text-color': $--skin-primary-color,
+
+  'iar-mobile-seat-table-guest-vertical:bg': './imgs/pws-seat-table-vertical-guest-bg.png',
+);
+
+.pws-theme-next-polyfill-red {
+  .pws-pc-watch-bg {
+    background-image: url('./imgs/pws-pc-watch-bg.png');
+  }
+
+  // .pws-mobile-follow-button {
+  //   color: map.get($--theme-configs, 'mobile-follow-button:text-color') !important;
+  //   background-color: map.get($--theme-configs, 'mobile-follow-button:bg-color') !important;
+  //   border-color: transparent !important;
+  // }
+
+  //  -------------- 云席嘉宾证 -------------  //
+  .pws-mobile-seat-table-guest-card__main {
+    background-image: url(
+      map.get(
+        $--theme-configs,
+        'mobile-seat-table-guest-card-main:bg-image'
+      )) !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  .pws-mobile-seat-table-guest-card__title {
+    span {
+      background-image: none !important;
+    }
+    &::before {
+      text-shadow: unset !important;
+    }
+  }
+
+  // ---------- 云席  --------- //
+  // 云席 loading
+  .plv-iar-seat-table__loading-wrapper {
+    background: map.get($--theme-configs, 'main-bg-color') !important;
+  }
+
+  .c-seat-table--mobile {
+    // 云席
+    .pws-iar-seat-table-light {
+      background-image: url(map.get($--theme-configs, 'iar-mobile-seat-table-light')) !important;
+    }
+    .pws-iar-seat-table-guest-bg {
+      background-image: url(map.get($--theme-configs, 'iar-mobile-seat-table-guest:bg')) !important;
+    }
+    .pws-iar-seat-table-guest-like {
+      background-image: url(map.get($--theme-configs, 'iar-mobile-seat-table-guest-like')) !important;
+    }
+    .pws-iar-seat-table-sofa-normal {
+      background-image: url(map.get($--theme-configs, 'iar-mobile-seat-table-sofa-normal')) !important;
+    }
+    .pws-iar-seat-table-sofa-vip {
+      background-image: url(map.get($--theme-configs, 'iar-mobile-seat-table-sofa-vip')) !important;
+    }
+    .pws-iar-seat-name-text {
+      color: map.get($--theme-configs, 'iar-mobile-seat-name-text:text-color') !important;
+    }
+    .pws-iar-seat-name-bLine {
+      background-color: map.get($--theme-configs, 'iar-mobile-seat-name-bLine:bg-color') !important;
+    }
+    .pws-seat-table-current-seat {
+      border-color: map.get($--theme-configs, 'iar-mobile-seat-table-current-seat:border-color') !important;
+    }
+  }
+
+  // 云席用户卡片
+  .pws-mobile-user-card__top-bg {
+    background-image: url(map.get($--theme-configs, 'iar-mobile-seat-user-card-top:bg')) !important;
+  }
+  .pws-user-card__info__content__corner {
+    background: map.get($--theme-configs, 'iar-mobile-seat-user-card-content--corner:bg') !important;
+    background-blend-mode: soft-light, normal;
+  }
+  .pws-user-card__qrcode-title {
+    background-image: map.get($--theme-configs, 'iar-mobile-seat-user-card-qrcode-title:bg') !important;
+  }
+  .pws-user-card__qrcode-wrap {
+    background-image: url(map.get($--theme-configs, 'iar-mobile-seat-user-card-qrcode-wrap:bg')) !important;
+    background-size: 100% 100% !important;
+  }
+  .pws-user-card__collection__btn {
+    background-image: map.get($--theme-configs, 'iar-mobile-seat-user-card-collect-btn:bg') !important;
+  }
+  .pws-user-card__collection__btn--cancel {
+    background: map.get($--theme-configs, 'iar-mobile-seat-user-card-collect-btn__cancel:bg') !important;
+    border-color: map.get($--theme-configs, 'primary-color') !important;
+    span {
+      background-image: map.get($--theme-configs, 'iar-mobile-seat-user-card-collect-btn__cancel:text-bg') !important;
+    }
+  }
+
+  // 云席入座提示
+  .pws-has-seat-tips__ico {
+    background: center url(map.get($--theme-configs, 'iar-mobile-seat-tips-ico:bg')) no-repeat !important;
+    background-size: cover !important;
+  }
+  .pws-has-seat-tips__seat__count {
+    color: map.get($--theme-configs, 'iar-mobile-seat-tips-seat-count:text-color') !important;
+  }
+
+
+  // 云席竖向模板
+  .pws-mobile-seat-table-vertical-bg {
+    background: map.get($--theme-configs, 'main-bg-color') !important;
+
+    .pws-iar-seat-table-guest-bg {
+      background-image: url(map.get($--theme-configs, 'iar-mobile-seat-table-guest-vertical:bg')) !important;
+    }
+  }
+}
+

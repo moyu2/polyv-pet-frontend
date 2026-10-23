@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     fill="none"
+     version="1.1"
+     width="116.14627075195312"
+     height="114.27639770507812"
+     viewBox="0 0 116.14627075195312 114.27639770507812">
+  <defs>
+    <filter id="master_svg0_2_9393"
+            filterUnits="objectBoundingBox"
+            color-interpolation-filters="sRGB"
+            x="-0.3515258199042994"
+            y="-0.3862028364864623"
+            width="1.7030516398085989"
+            height="1.7724056729729245">
+      <feFlood flood-opacity="0"
+               result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha"
+                     type="matrix"
+                     values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dy="0"
+                dx="0" />
+      <feGaussianBlur stdDeviation="5" />
+      <feColorMatrix type="matrix"
+                     values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.20000000298023224 0" />
+      <feBlend mode="normal"
+               in2="BackgroundImageFix"
+               result="effect1_dropShadow" />
+      <feBlend mode="normal"
+               in="SourceGraphic"
+               in2="effect1_dropShadow"
+               result="shape" />
+    </filter>
+  </defs>
+  <g>
+    <g style="opacity:0;">
+      <rect x="30.378631591796875"
+            y="26.9156494140625"
+            width="70"
+            height="70"
+            rx="0"
+            fill="#FFFFFF"
+            fill-opacity="1" />
+    </g>
+    <g transform="matrix(0.8660253882408142,-0.5000000596046448,0.5000000596046448,0.8660253882408142,-21.723713866662365,16.801618151539515)"
+       style="opacity:0.4000000059604645;"
+       filter="url(#master_svg0_2_9393)">
+      <path d="M21.451396462890624,90.20302917578125C18.712097862890626,94.90989717578125,22.160500962890627,100.80448117578125,27.605844962890625,100.72323217578125L70.47992696289063,100.08351917578125C75.78622096289062,100.00434517578125,79.07799896289063,94.27988417578125,76.47733696289063,89.65391517578125L55.594031962890625,52.50742867578125C52.941138962890626,47.78855607578125,46.16513096289063,47.73803567578125,43.44217296289062,52.41682767578125L21.451396462890624,90.20302917578125Z"
+            fill="#FFFFFF"
+            fill-opacity="1" />
+    </g>
+  </g>
+</svg>

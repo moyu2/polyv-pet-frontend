@@ -1,0 +1,292 @@
+@import './next-basic-style.scss';
+@import './next-basic-iar-style.scss';
+
+/**
+ * 生成皮肤的 basic mobile 端 样式 (next 专用)
+ * 规则：pws-mobile-*
+ */
+@mixin generate-theme-basic-mobile-style($--theme-configs) {
+  .pws-theme-#{$--theme-type} {
+    @include generate-theme-basic-style($--theme-configs);
+    @include generate-theme-basic-iar-mobile-style($--theme-configs);
+
+    // --------- 引导页 --------- //
+    .pws-mobile-splash-page {
+      background-color: $--dynamic-theme-color !important;
+    }
+
+    // --------- 倒计时 ---------- //
+    .pws-mobile-count-down-square-item {
+      background-color: rgba(255, 255, 255, .8) !important;
+      .pws-count-down-square-item-count {
+        color: rgba(0, 0, 0, .6) !important;
+        border-color: rgba(0, 0, 0, 0.1) !important;
+      }
+      .pws-count-down-square-item-word {
+        color: rgba(0, 0, 0, .6) !important;
+      }
+      &::before,
+      &::after {
+        background-color: rgba(255, 255, 255, 0.4) !important;
+      }
+    }
+
+    // --------- 关注 --------- //
+    .pws-mobile-follow-button {
+      color: map.get($--theme-configs, 'primary-button:text-color') !important;
+      background-color: $--dynamic-primary-color !important;
+    }
+    .pws-mobile-follow-button--support-config {
+      color: map.get($--theme-configs, 'primary-button:config-text-color') !important;
+      background: map.get($--theme-configs, 'primary-button:config-bg') !important;
+      border: 1px solid transparent;
+      border-color: map.get($--theme-configs, 'primary-button:config-border-color') !important;
+    }
+
+
+    // -------- 文档 -------- //
+    .pws-mobile-doc-container {
+      background-color: $--dynamic-theme-color !important;
+    }
+
+    // --------- 消息输入框 --------- //
+    .pws-mobile-chat-msg-input {
+      @if ($--theme-type == 'next-dark') {
+        background-color: $--dynamic-reverse-neutral-light-2;
+        border-color: $--dynamic-neutral-light-1;
+      } @else {
+        background-color: $--dynamic-reverse-neutral-light-6;
+        border-color: $--dynamic-neutral-light-1;
+      }
+    }
+    .pws-mobile-chat-msg-input-textarea {
+      color: $--dynamic-neutral-color;
+      &::placeholder {
+        color: $--dynamic-neutral-light-6;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $--dynamic-primary-color;
+      }
+    }
+    .pws-mobile-msg-input-suffix-icon {
+      color: $--dynamic-neutral-light-7 !important;
+    }
+    .pws-mobile-msg-send-button {
+      color: $--dynamic-neutral-color !important;
+    }
+
+
+    // --------- 表情选择 --------- //
+    .pws-mobile-msg-input-wrap-emotion-show,
+    .pws-mobile-msg-input-wrap-alway-active {
+      .pws-mobile-msg-input-wrap-main {
+        background-color: $--dynamic-theme-color !important;
+      }
+      .pws-mobile-msg-send-button {
+        color: $--dynamic-neutral-color !important;
+      }
+      .pws-mobile-chat-msg-input {
+        background-color: $--dynamic-neutral-light-05;
+      }
+      .pws-mobile-chat-msg-input-textarea {
+        color: $--dynamic-neutral-color;
+        &::placeholder {
+          color: $--dynamic-neutral-light-6;
+        }
+      }
+      .pws-mobile-msg-input-suffix-icon {
+        color: $--dynamic-neutral-light-7 !important;
+      }
+    }
+    .pws-mobile-emotion-picker {
+      background-color: $--dynamic-theme-color !important;
+    }
+    .pws-mobile-emotion-picker-tabs {
+      background-color: $--dynamic-neutral-light-05 !important;
+    }
+    .pws-mobile-emotion-picker-tabs-item {
+      color: $--dynamic-neutral-light-5 !important;
+      &.is-active {
+        color: $--dynamic-neutral-color !important;
+      }
+    }
+    .pws-mobile-emotion-picker-tabs-active {
+      background-color: $--dynamic-neutral-light-1 !important;
+    }
+    .pws-mobile-emotion-picker-del-button {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-neutral-light-05 !important;
+    }
+
+    // --------- 打赏 --------- //
+    .pws-mobile-donate-button {
+      background-color: $--dynamic-theme-light-1 !important;
+    }
+    .pws-mobile-donate-panel {
+      background-color: $--dynamic-theme-color !important;
+    }
+    .pws-mobile-panel-header-title {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-panel-header-close {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-donate-good-item.is-active {
+      background-color: $--dynamic-neutral-light-1 !important;
+      border-color: $--dynamic-neutral-light-4;
+    }
+    .pws-mobile-donate-good-name {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-donate-good-price {
+      color: $--dynamic-neutral-light-5 !important;
+    }
+    .pws-mobile-donate-carousel-indicator-item {
+      background-color: $--dynamic-neutral-light-5 !important;
+      &.is-active {
+        background-color: $--dynamic-neutral-color !important;
+      }
+    }
+    .pws-mobile-donate-panel-option {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-theme-color !important;
+      &.is-active {
+        color: $--dynamic-neutral-color !important;
+        background-color: $--dynamic-theme-color !important;
+        border-color: $--dynamic-neutral-color !important;
+      }
+    }
+    .pws-mobile-donate-send-button {
+      color: map.get($--theme-configs, 'primary-button:text-color') !important;
+      background-color: $--dynamic-primary-color !important;
+    }
+    .pws-mobile-donate-point-data {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-donate-point-data-count {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-donate-cash-Next-cash {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-donate-Next-cash-random {
+      color: $--dynamic-neutral-color !important;
+    }
+
+    // -------- 回放列表 -------- //
+    .pws-mobile-playback-list-playing {
+      background-color: $--dynamic-primary-color !important;
+    }
+    .pws-mobile-playback-list-title,
+    .pws-mobile-playback-list-time,
+    .pws-mobile-playback-list-tips {
+      color: $--dynamic-neutral-light-7 !important;
+    }
+    .pws-mobile-playback-list-item.is-active {
+      .pws-mobile-playback-list-title,
+      .pws-mobile-playback-list-time {
+        color: $--dynamic-neutral-color !important;
+      }
+    }
+
+    // -------- 多会场 -------- //
+    .pws-mobile-multi-meeting {
+      color: $--dynamic-neutral-color;
+      background-color: $--dynamic-theme-color;
+    }
+    .pws-mobile-multi-meeting-count {
+      color: $--dynamic-neutral-light-6;
+    }
+    .pws-mobile-multi-meeting-pack-up {
+      color: $--dynamic-neutral-light-6;
+    }
+
+    // -------- 多会场竖屏 -------- //
+    .pws-mobile-multi-meeting-portrait-container {
+      background-color: $--dynamic-neutral-light-1;
+    }
+    .pws-mobile-multi-meeting-portrait-title {
+      color: $--dynamic-neutral-light-7;
+    }
+    .pws-mobile-multi-meeting-portrait-name {
+      color: $--dynamic-neutral-color;
+    }
+    .pws-mobile-multi-meeting-portrait-time {
+      color: $--dynamic-neutral-light-6;
+    }
+    .pws-mobile-multi-meeting-portrait-pv {
+      color: $--dynamic-neutral-light-7;
+    }
+    .pws-mobile-meeting-portrait-no-more {
+      color: $--dynamic-neutral-light-5;
+    }
+
+    //   -------------- 实时字幕 -------------  //
+    .pws-mobile-subtitle__top-skin {
+      .pws-mobile-subtitle-select__body {
+        background: $--dynamic-theme-color !important;
+      }
+
+      .pws-mobile-subtitle-select__body__input,
+      .pws-mobile-subtitle-select__body__icon {
+        color: $--dynamic-neutral-color !important;
+      }
+    }
+
+    .pws-mobile-subtitle__content-skin {
+      .pws-mobile-subtitle__content-item {
+        color: $--dynamic-neutral-color !important;
+        background: $--dynamic-theme-light-8 !important;
+      }
+      .pws-mobile-subtitle__content-item-line {
+        border-color: $--dynamic-neutral-color !important;
+      }
+    }
+
+    .pws-mobile-subtitle__footer-tips {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+
+    .pws-subtitle__empty {
+      color: $--dynamic-neutral-color !important;
+    }
+
+    .pws-subtitle__new {
+      color: $--dynamic-neutral-color !important;
+      background: $--dynamic-primary-light-2 !important;
+    }
+
+    // -------------- 移动端弹层样式  -------------  //
+    .pws-mobile-popup__content {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-theme-color !important;
+    }
+    .pws-mobile-popup__header__title {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-mobile-popup__header__btn {
+      color: $--dynamic-neutral-color !important;
+    }
+
+    //  -------------- 移动端底部 Tabs 标签头部  -------------  //
+    .pws-mobile-popup-tab-header__current-line {
+      background: $--dynamic-primary-color !important;
+    }
+
+    // 邀请榜相关
+    .pws-mobile-invite-rank__not__info {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+
+    // -------- 弹幕边框 -------- //
+    .plv-player-module-danmu-node--self {
+      box-sizing: border-box;
+      padding: 4px 8px !important;
+      background: $--dynamic-neutral-light-1;
+      border: solid 1px $--dynamic-primary-color !important;
+      border-radius: 4px !important;
+    }
+
+    // @warn 需要在这块区域补充多皮肤样式
+  }
+}

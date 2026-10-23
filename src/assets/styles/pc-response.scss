@@ -1,0 +1,11 @@
+// PC 端响应式样式
+
+.g-aside-font-size {
+  font-size: 16px;
+}
+
+@media (max-width: 1920px) {
+  .g-aside-font-size {
+    font-size: 14px !important;
+  }
+}

@@ -1,0 +1,48 @@
+.c-portrait-player-control__select-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 14px 16px 46px;
+}
+
+.c-portrait-player-control__select-item {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 66px;
+  height: 26px;
+  margin-right: 30px;
+  font-size: 14px;
+  line-height: 26px;
+  color: $--color-white;
+  text-align: center;
+  border-radius: 13px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.c-portrait-player-control__select-item--active {
+  color: #FFC815;
+  border: 1px solid #FFC815;
+}
+
+.c-portrait-player-control__select-list--large {
+  .c-portrait-player-control__select-item {
+    width: 80px;
+  }
+}
+
+.c-portrait-player-control__select-list--mini {
+  .c-portrait-player-control__select-item {
+    width: 56px;
+    margin-right: 20px;
+  }
+}
+
+.c-portrait-player-control__select-list--space-between {
+  display: flex;
+  justify-content: space-between;
+  .c-portrait-player-control__select-item {
+    margin-right: 0;
+  }
+}

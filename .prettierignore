@@ -1,0 +1,41 @@
+.DS_Store
+
+# Logs
+logs
+*.log*
+
+# Dependency directories
+**/node_modules
+**/jspm_packages
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Editor directories and files
+.idea
+#.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Polyv
+*.html
+*.min.js
+**/.dist/
+**/dist/
+**/dist-static/
+**/dist-sdk-inject/
+**/dist-saas/
+**/map-file/**
+**/component-icons/**

@@ -1,0 +1,9 @@
+{
+  "tool": "built-in imagegen",
+  "mode": "edit",
+  "target": "adult-look.png contact sheet from original atlas",
+  "identityReference": "public/assets/pets/chicken-v2/adult-poster.webp",
+  "prompt": "Use case: precise-object-edit and background-extraction. Asset: an existing game's adult golden chicken sprite sheet. Image 1 is the EDIT TARGET, a 4-column by 4-row contact sheet of sixteen gaze poses, numbered 0 through 15. Image 2 is an IDENTITY REFERENCE showing the complete uncut chicken. Repair image 1, keeping the same sixteen head/gaze orientations in exactly the same row-major order and the same recognizable golden plush chicken with red comb/wattle, cream breast, orange beak and orange feet. Restore all missing chest, wing, and tail silhouette on the hard vertical cutoffs, especially poses 9-14. Remove EVERY white opaque background remnant in the gap between the two orange legs. Preserve cream-colored breast feathers above the legs. Each bird must be complete with rounded natural silhouette, both feet and whole tail visible. Output exactly sixteen separate full-body sprites on a genuinely transparent RGBA background, in a regular 4x4 grid on a 1024x1024 canvas (256x256 per cell). Center each chicken in its cell, feet at cell y=232, bird height about 160 pixels, generous clear margin all around. Keep gaze pose distinctions, style, proportions, feather detail and lighting consistent with the input. No gray background, no white background anywhere between legs, no ground, no shadow, no labels, no digits, no text, no grid lines, no frame, no accessories, no overlapping neighboring cells. This is a targeted repair of the existing character, not a redesign.",
+  "version": "2026-10-23-chicken-v2",
+  "notes": "Runtime sheet assembled with existing boundary cleanup; three non-gaze bad frames replaced by adjacent intact poses."
+}

@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "allowJs": true,
+    "checkJs": false,
+    "strict": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ESNext",
+    "declaration": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@utils-ts/*": [
+        "node_modules/@polyv/utils/es/*"
+      ]
+    }
+  },
+  "include": [
+    "./src",
+    "./types"
+  ],
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "strictTemplates": false
+  }
+}

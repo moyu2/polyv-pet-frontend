@@ -1,0 +1,29 @@
+// =====================================================
+// Next Theme Light 模式完整配置
+// =====================================================
+
+@import '../variables.scss';
+
+$--theme-type: 'next-light';
+
+$--theme-configs: (
+  // ========== 图片资源配置（后续尽量改成 svg） ==========
+
+  // 主要 tab 主体
+  'main-tab-body-empty-icon:bg-image': '../../images/pws-icon-empty-menu-dark.png',
+  // 聊天室图标 - Light 模式下使用深色图标
+  'chat-close-tips-icon:bg-image': '../../images/pws-icon-chat-close-dark.png',
+  'chat-close-tips-icon__empty:bg-image': '../../images/pws-icon-chat-empty-dark.png',
+  // 连麦
+  'pc-connect-mic-applying:icon-image': '../../images/pws-pc-connect-mic-dark.png',
+  // 问答
+  'iar-mobile-qa-no-data:icon-image': '../../images/pws-qa-no-data-icon-dark.png',
+
+  // ========== 主要/高亮按钮配置 ==========
+
+  // Light 模式下字体色为白色
+  'primary-button:text-color': #fff,
+  'primary-button:config-bg': #{'var(--pws-next-normal-btn-bg, #{$--dynamic-primary-color})'},
+  'primary-button:config-text-color': #{'var(--pws-next-normal-btn-text-color, #fff)'},
+  'primary-button:config-border-color': #{'var(--pws-next-normal-btn-border-color, #{$--dynamic-primary-color})'},
+);

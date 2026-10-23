@@ -1,0 +1,308 @@
+@import './next-basic-style.scss';
+@import './next-basic-iar-style.scss';
+
+/**
+ * 生成皮肤的 basic pc 端 样式 (next 专用)
+ * 规则：pws-pc-*
+ */
+@mixin generate-theme-basic-pc-style($--theme-configs) {
+  .pws-theme-#{$--theme-type} {
+    @include generate-theme-basic-style($--theme-configs);
+    @include generate-theme-basic-iar-pc-style($--theme-configs);
+    @include generate-theme-basic-plv-ui-pc-style($--theme-configs);
+    @include generate-theme-special-iar-pc-style($--theme-configs);
+
+    // ---------- 观看页背景 ---------- //
+    .pws-pc-watch-bg {
+      background-color: $--dynamic-theme-light-9;
+    }
+
+    .pws-pc-sub-pack-up-placeholder {
+      color: $--dynamic-neutral-color;
+      background-color: $--dynamic-theme-color;
+    }
+
+    // --------- 倒计时 ---------- //
+    .pws-pc-count-down-square-item {
+      background-color: $--dynamic-theme-color !important;
+      .pws-count-down-square-item-count {
+        color: $--dynamic-neutral-color !important;
+        border-color: $--dynamic-theme-light-8 !important;
+      }
+      .pws-count-down-square-item-word {
+        color: $--dynamic-neutral-color !important;
+      }
+      &::before,
+      &::after {
+        background-color: $--dynamic-theme-color !important;
+      }
+    }
+
+    // 聊天消息底部输入框层
+    .pws-pc-msg-bottom-input-wrap {
+      background-color: $--dynamic-theme-light-5 !important;
+    }
+    .pws-pc-msg-bottom-input-wrap-item {
+      color: $--dynamic-neutral-light-8 !important;
+      &:not(.is-disabled):hover {
+        opacity: 0.6;
+      }
+    }
+    .pws-pc-msg-input-limit {
+      color: $--dynamic-neutral-light-8 !important;
+    }
+
+    // ---------- 聊天消息输入框 ---------- //
+    .pws-pc-chat-msg-input {
+      color: $--dynamic-neutral-color !important;
+
+      // background-color: $--dynamic-theme-color !important;
+      @if ($--theme-type == 'next-dark') {
+        background-color: $--dynamic-reverse-neutral-light-2 !important;
+        border-color: $--dynamic-neutral-light-1 !important;
+      } @else {
+        background-color: $--dynamic-reverse-neutral-light-6 !important;
+        border-color: $--dynamic-neutral-light-1 !important;
+      }
+    }
+    .pws-pc-chat-msg-input-textarea {
+      color: $--dynamic-neutral-color !important;
+      @if ($--theme-type == 'next-dark') {
+        background-color: $--dynamic-reverse-neutral-light-2 !important;
+        border-color: $--dynamic-neutral-light-1 !important;
+      } @else {
+        background-color: $--dynamic-reverse-neutral-light-6 !important;
+        border-color: $--dynamic-neutral-light-1 !important;
+      }
+      &::placeholder {
+        color: $--dynamic-neutral-light-6 !important;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $--dynamic-primary-color !important;
+      }
+    }
+
+    // ---------- 聊天消息发送按钮 ---------- //
+    .pws-pc-msg-send-button {
+      color: map.get($--theme-configs, 'primary-button:text-color') !important;
+      background-color: $--dynamic-primary-color !important;
+      &.is-disabled {
+        opacity: 0.6;
+      }
+    }
+
+    // ------------ 图片达到最大数量后的提示框  ----------- //
+    .pws-pc-msg-input-popper__max-image-tips {
+      color: $--dynamic-theme-color !important;
+      background-color: $--dynamic-neutral-light-9 !important;
+    }
+
+    // ---------- 设置昵称占位层 ---------- //
+    .pws-pc-set-nick-placeholder {
+      color: $--dynamic-neutral-color !important;
+      background-color: $--dynamic-theme-color !important;
+    }
+    .pws-pc-set-nick-placeholder-highlight {
+      color: $--dynamic-neutral-color !important;
+    }
+
+    // ---------- 表情选择 ---------- //
+    .pws-pc-emotion-panel {
+      background-color: $--dynamic-theme-color !important;
+    }
+    .pws-pc-emotion-panel-scrollbar {
+      &::-webkit-scrollbar-thumb {
+        background-color: $--dynamic-neutral-light-1 !important;
+      }
+    }
+    .pws-pc-emotion-panel-type-tab {
+      background-color: $--dynamic-primary-light-3 !important;
+
+      .is-active {
+        background-color: $--dynamic-primary-light-5 !important;
+      }
+    }
+
+    // ---------- 更多面板 ---------- //
+    .pws-pc-more-panel {
+      background-color: $--dynamic-theme-light-8 !important;
+
+      .pws-pc-checkbox.is-checked {
+        .pws-pc-checkbox-inner {
+          background-color: $--dynamic-neutral-color !important;
+        }
+        .pws-pc-checkbox-inner-icon {
+          color: $--dynamic-theme-light-9 !important;
+        }
+      }
+    }
+    .pws-pc-more-panel-item {
+      color: $--dynamic-neutral-light-8 !important;
+      &:hover {
+        color: $--dynamic-neutral-color !important;
+      }
+    }
+
+    // ---------- 打赏 ---------- //
+    .pws-pc-donate-panel {
+      background-color: $--dynamic-theme-light-8 !important;
+    }
+    .pws-pc-donate-panel-scrollbar {
+      &::-webkit-scrollbar-thumb {
+        background-color: $--dynamic-neutral-light-1 !important;
+      }
+    }
+    .pws-pc-donate-good-item:hover {
+      background-color: $--dynamic-neutral-light-1 !important;
+      border-color: $--dynamic-neutral-light-4;
+    }
+    .pws-pc-donate-good-name {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-pc-donate-good-price {
+      color: $--dynamic-neutral-light-5 !important;
+    }
+
+    // -------- 连麦 -------- //
+    .pws-pc-connect-mic-desc-icon {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+    .pws-pc-connect-mic-desc-text {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+    .pws-pc-connect-mic-button-highlight-text {
+      color: $--dynamic-neutral-color !important;
+    }
+    .pws-pc-connect-mic-applying-icon {
+      background-image: url(map.get($--theme-configs, 'pc-connect-mic-applying:icon-image')) !important;
+      background-size: contain;
+    }
+
+    // -------- 回放列表 -------- //
+    .pws-pc-playback-list-playing {
+      background-color: $--dynamic-primary-color !important;
+    }
+
+    //   -------------- 实时字幕 -------------  //
+    .pws-pc-subtitle__top-skin {
+      background: $--dynamic-theme-color !important;
+      .plv-cascader__body {
+        color: $--dynamic-neutral-color !important;
+      }
+      .c-pc-subtitle-hover-control__top {
+        color: $--dynamic-neutral-color !important;
+      }
+    }
+
+    .pws-pc-subtitle__content-skin {
+      .pws-pc-subtitle__content-item {
+        color: $--dynamic-neutral-color !important;
+        background: $--dynamic-theme-light-8 !important;
+      }
+      .pws-pc-subtitle__content-item-line {
+        border-color: $--dynamic-neutral-color !important;
+      }
+    }
+
+    .pws-pc-subtitle__footer-tips {
+      color: $--dynamic-neutral-light-6 !important;
+    }
+
+    .pws-subtitle__empty {
+      color: $--dynamic-neutral-color !important;
+    }
+
+    .pws-subtitle__new {
+      color: $--dynamic-neutral-color !important;
+      background: $--dynamic-primary-light-2 !important;
+    }
+
+    // -------- 弹幕边框 -------- //
+    .plv-player-module-danmu-node--self {
+      box-sizing: border-box;
+      padding: 4px 8px !important;
+      background: $--dynamic-neutral-light-1;
+      border: solid 1px $--dynamic-primary-color !important;
+      border-radius: 4px !important;
+    }
+
+    // --------- AI 答疑 - 消息输入框 --------- //
+    .pws-mobile-chat-msg-input {
+      @if ($--theme-type == 'next-dark') {
+        background-color: $--dynamic-reverse-neutral-light-2;
+      } @else {
+        background-color: $--dynamic-reverse-neutral-light-6;
+      }
+    }
+    .pws-mobile-chat-msg-input-textarea {
+      color: $--dynamic-neutral-color;
+      &::placeholder {
+        color: $--dynamic-neutral-light-6;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $--dynamic-primary-color;
+      }
+    }
+    .pws-mobile-msg-input-suffix-icon {
+      color: $--dynamic-neutral-light-7 !important;
+    }
+    .pws-mobile-msg-send-button {
+      color: $--dynamic-neutral-color !important;
+    }
+  }
+
+  .pws-next-pc-normal-tabs {
+    background: none !important;
+  }
+
+  .pws-next-pc-normal-tab-header {
+    background-color: $--dynamic-theme-color !important;
+    border-bottom: none !important;
+  }
+
+  .pws-next-pc-normal-tab-header__item {
+    color: $--dynamic-neutral-light-6 !important;
+  }
+
+  .pws-next-pc-normal-tab-header__item--current {
+    color: $--dynamic-neutral-color !important;
+  }
+}
+
+@mixin generate-theme-special-iar-pc-style($--theme-configs) {
+  // ---------- 中奖记录 --------- //
+  .pws-iar-lottery-record-button {
+    color: $--dynamic-theme-color !important;
+    background-color: $--dynamic-neutral-light-9 !important;
+  }
+  .pws-iar-lottery-record-button-received {
+    opacity: 0.5;
+  }
+}
+
+
+@mixin generate-theme-basic-plv-ui-pc-style($--theme-configs) {
+  .pws-pc-image-paste-input-wrapper {
+    color: $--dynamic-neutral-color !important;
+    // background-color: $--dynamic-theme-color !important;
+    @if ($--theme-type == 'next-dark') {
+      background-color: $--dynamic-reverse-neutral-light-2 !important;
+      border-color: $--dynamic-neutral-light-1 !important;
+    } @else {
+      background-color: $--dynamic-reverse-neutral-light-6 !important;
+      border-color: $--dynamic-neutral-light-1 !important;
+    }
+
+    .plv-input-paste-image {
+      color: inherit;
+      background: unset;
+      border: none;
+      &::-webkit-scrollbar-thumb {
+        background-color: $--dynamic-primary-color !important;
+      }
+      &::before {
+        color: $--dynamic-neutral-light-6 !important;
+      }
+    }
+  }
+}

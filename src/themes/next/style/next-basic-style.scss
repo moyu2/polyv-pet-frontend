@@ -1,0 +1,236 @@
+// 生成皮肤的 basic 样式 (next 专用)
+@mixin generate-theme-basic-style($--theme-configs) {
+  // 在多皮肤下去除背景
+  .pws-bg-none {
+    background: none !important;
+  }
+
+  .pws-theme-bg {
+    background-color: $--dynamic-theme-color !important;
+  }
+
+  .pws-next-primary-color {
+    color: $--dynamic-primary-color !important;
+  }
+
+  .pws-next-primary-bg-color {
+    background-color: $--dynamic-primary-color !important;
+  }
+
+  .pws-next-primary-border-color {
+    border-color: $--dynamic-primary-color !important;
+  }
+
+
+  .pws-next-primary-text-color {
+    @if ($--theme-type == 'next-dark') {
+      color: $--dynamic-neutral-color !important;
+    } @else {
+      color: $--dynamic-neutral-light-8 !important;
+    }
+  }
+
+  .pws-next-secondary-text-color {
+    @if ($--theme-type == 'next-dark') {
+      color: $--dynamic-neutral-light-6 !important;
+    } @else {
+      color: $--dynamic-neutral-light-4 !important;
+    }
+  }
+
+  .pws-theme-mask-bg {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      content: '';
+      background-color: var(--pws-next-theme-mask-bgColor);
+    }
+  }
+
+
+  // --------- 按钮：主要 --------- //
+  .pws-normal-button-primary {
+    color: map.get($--theme-configs, 'primary-button:text-color') !important;
+    background-color: $--dynamic-primary-color !important;
+
+    &:not(.is-mobile, .is-disabled) {
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+    &.is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .pws-normal-button-primary--config-wrapper {
+    .pws-normal-button-primary {
+      color: map.get($--theme-configs, 'primary-button:config-text-color') !important;
+      background: map.get($--theme-configs, 'primary-button:config-bg') !important;
+      border: 1px solid transparent;
+      border-color: map.get($--theme-configs, 'primary-button:config-border-color') !important;
+
+      &:not(.is-mobile, .is-disabled) {
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          opacity: 0.8;
+        }
+      }
+      &.is-disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // -------- 按钮：侧边栏 -------- //
+  .pws-normal-button-aside-menu {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-neutral-light-1 !important;
+    &:not(.is-mobile, .is-disabled) {
+      &:hover {
+        background-color: $--dynamic-neutral-light-2 !important;
+      }
+      &:active {
+        background-color: $--dynamic-neutral-light-15 !important;
+      }
+    }
+  }
+
+  // --------- 常规 tab --------- //
+  .pws-normal-tab-current-line {
+    background-color: $--dynamic-primary-color !important;
+  }
+
+  // --------- 主要 tab ---------- //
+  .pws-main-tab-header {
+    background-color: $--dynamic-theme-color !important;
+  }
+  .pws-main-tab-header-arrow-right,
+  .pws-main-tab-header-arrow-left {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-theme-color !important;
+  }
+  .pws-next-main-tab-header-arrow-right,
+  .pws-next-main-tab-header-arrow-left {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-theme-color !important;
+  }
+  .pws-main-tab-body {
+    background-color: $--dynamic-theme-color !important;
+  }
+  .pws-main-tab-empty {
+    color: $--dynamic-neutral-light-4;
+    &::before {
+      background-image: url(map.get($--theme-configs, 'main-tab-body-empty-icon:bg-image'));
+    }
+  }
+  .pws-main-tab-body-scrollbar {
+    &::-webkit-scrollbar-thumb {
+      background-color: $--dynamic-primary-color !important;
+    }
+  }
+
+  // --------- 聊天室关闭提示 ---------- //
+  .pws-chat-close-tips-icon {
+    background-image: url(map.get($--theme-configs, 'chat-close-tips-icon:bg-image')) !important;
+  }
+  .pws-chat-close-tips-icon__empty {
+    background-image: url(map.get($--theme-configs, 'chat-close-tips-icon__empty:bg-image')) !important;
+  }
+  .pws-chat-close-tips-text {
+    color: $--dynamic-neutral-light-4 !important;
+  }
+
+
+  // --------- 聊天消息 ---------- //
+  // 聊天消息用户昵称
+  .pws-chat-msg-user-nickname {
+    color: $--dynamic-neutral-color !important;
+  }
+  .pws-msg-user-info-special .pws-chat-msg-user-nickname {
+    color: $--dynamic-neutral-color !important;
+  }
+
+  // 聊天消息用户设置昵称图标
+  .pws-chat-msg-user-set-nick-icon {
+    color: $--dynamic-neutral-color !important;
+  }
+
+  // 聊天引用回复消息
+  .pws-chat-quote-msg {
+    color: $--dynamic-neutral-color !important;
+    background-color: $--dynamic-theme-light-8 !important;
+  }
+
+  // 聊天室更多消息
+  .pws-chat-msg-more-button {
+    color: $--dynamic-neutral-color;
+    background-color: $--dynamic-primary-color;
+    &:hover {
+      color: $--dynamic-neutral-color;
+      background-color: $--dynamic-primary-color;
+    }
+  }
+
+  // --------- 提问 ---------- //
+  // 提问更多消息
+  .pws-ask-msg-more-button {
+    color: $--dynamic-neutral-color;
+    background-color: $--dynamic-primary-color;
+    &:hover {
+      color: $--dynamic-neutral-color;
+      background-color: $--dynamic-primary-color;
+    }
+  }
+
+  // -------- 章节 -------- //
+  .pws-chapter-item {
+    color: $--dynamic-neutral-color !important;
+    border-bottom-color: $--dynamic-neutral-light-1 !important;
+    &.is-active {
+      color: $--dynamic-neutral-color !important;
+    }
+  }
+
+  .pws-chapter-item-playing {
+    background-color: $--dynamic-primary-color !important;
+  }
+
+  // -------- 成员列表 ------- //
+  .pws-member-list-item {
+    color: $--dynamic-neutral-color !important;
+  }
+  .pws-member-list-item-special {
+    color: $--dynamic-neutral-color !important;
+  }
+  .pws-member-list-fail {
+    color: $--dynamic-neutral-light-6 !important;
+  }
+  .pws-member-list-fail-highlight {
+    color: $--dynamic-neutral-color !important;
+  }
+
+  // -------- 页面广告 -------- //
+  .pws-page-advert {
+    color: $--dynamic-neutral-color;
+    background-color: $--dynamic-theme-color;
+  }
+  .pws-page-advert-arrow {
+    color: $--dynamic-neutral-color;
+  }
+
+
+  // 滑块颜色
+  .pws-slide-bar__inner-track {
+    background-color: $--dynamic-primary-color !important;
+  }
+}
